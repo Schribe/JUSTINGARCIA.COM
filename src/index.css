@@ -1,0 +1,558 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Amatic SC";
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin-top: 130px;
+  font-size: 175px;
+  font-weight: 800;
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 2s ease-in;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px;
+  margin-right: 80px;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.link {
+  transition: transform 0.3s ease;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 37px;
+  text-decoration: none;
+}
+
+.link:hover {
+  transform: rotate(10deg);
+  cursor: pointer;
+  color: red;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* FOOTERS */
+
+.footer-main {
+  background-color: black;
+  padding-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 40px;
+  padding-bottom: 85px;
+  background-color: black;
+}
+
+.footer-txt {
+  text-align: center;
+  font-size: 65px;
+  color: white;
+}
+
+.footer-two {
+  border-top: 1px solid white;
+}
+
+/* SVG LOGO */
+
+/* Define a CSS animation for the spinning effect */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to the .vero class */
+.insta {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  padding-top: 14px;
+  fill: black;
+  transition: transform 0.5s ease, scale 0.5s ease; /* Add smooth transitions for rotation and scaling */
+  transform-origin: center;
+}
+
+.insta:hover {
+  cursor: pointer;
+  -webkit-animation: spin 1s linear infinite; /* Apply the 'spin' animation for Safari */
+  animation: spin 1s linear infinite; /* Apply the 'spin' animation for other browsers */
+}
+
+/* Style the .vero-container */
+.insta-container {
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  transition: transform 0.5s ease; /* Add a smooth transition for size changes */
+}
+
+.insta-container:hover {
+  transform: scale(1.1); /* Increase the scale when hovered */
+}
+
+.vero {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  padding-top: 20px;
+  fill: black;
+  transition: transform 0.5s ease, scale 0.5s ease; /* Add smooth transitions for rotation and scaling */
+  transform-origin: center;
+}
+
+/* Add the animation and size increase only when hovering */
+.vero:hover {
+  cursor: pointer;
+  -webkit-animation: spin 1s linear infinite; /* Apply the 'spin' animation for Safari */
+  animation: spin 1s linear infinite; /* Apply the 'spin' animation for other browsers */
+}
+.vero-container {
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  transition: transform 0.5s ease; /* Add a smooth transition for size changes */
+}
+
+/* Keep the container at an increased size when hovered */
+.vero-container:hover {
+  transform: scale(1.1); /* Increase the scale when hovered */
+}
+/* Keep the container at an increased size when hovered */
+
+/* LOADING SCREEN */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+  z-index: 9999;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ABOUT  */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.about-txt {
+  color: white;
+  font-size: 55px;
+  text-align: start;
+  padding-top: 10px;
+}
+.about-txt2 {
+  color: white;
+  font-size: 55px;
+  padding-bottom: 20px;
+  text-align: end;
+}
+
+.see {
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.see:hover {
+  transform: scale(1.5);
+}
+
+.red {
+  color: red;
+}
+
+.about-txt {
+  opacity: 0; /* Start with opacity 0 to hide the text */
+  transition: opacity 0.6s ease-in-out; /* Smooth transition */
+}
+
+.about-txt.fade-in {
+  opacity: 1; /* Opacity 1 to show the text */
+}
+.about-txt2 {
+  opacity: 0; /* Start with opacity 0 to hide the text */
+  transition: opacity 0.6s ease-in-out; /* Smooth transition */
+}
+
+.about-txt2.fade-in {
+  opacity: 1; /* Opacity 1 to show the text */
+}
+
+/* TITLE FADE IN ANIMATION */
+
+.title-fade {
+  opacity: 0; /* Start with opacity 0 to hide the text */
+  transition: opacity 0.6s ease-in-out; /* Smooth transition */
+}
+
+.title-fade.fade-in {
+  opacity: 1; /* Opacity 1 to show the text */
+}
+
+/* CONTACT FORM */
+
+.contact-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 85px;
+  opacity: 0; /* Start with opacity 0 to hide the text */
+  transition: opacity 1.5s ease-in-out; /* Smooth transition */
+}
+.contact-container.fade-in {
+  opacity: 1;
+}
+
+.contact-header {
+  color: white;
+  font-size: 101px;
+  width: 200px;
+}
+
+.contact-inputs {
+  overflow-y: hidden;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  color: white;
+  font-size: 35px;
+}
+
+.input {
+  font-family: serif;
+  font-size: 23px;
+  border: none;
+  padding: 5px;
+  /* border-radius: 15px; */
+}
+.input:focus {
+  outline: none;
+}
+
+.message {
+  padding: 25px;
+  resize: none;
+}
+
+.send {
+  margin-top: 28px;
+  padding: 15px;
+  font-size: 35px;
+  font-weight: 800;
+  border: none;
+  transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+}
+
+.send:hover {
+  color: red;
+  cursor: pointer;
+  transform: scale(1.15); /* Increase the size by 5% when hovered */
+}
+
+/* GALLERY */
+
+.gallery-container {
+  background-color: rgb(0, 0, 0);
+}
+
+.gallery-nav {
+  display: flex;
+  align-items: center; /* Vertically align the items if needed */
+  margin-top: 45px;
+  margin-right: 65px;
+  overflow: hidden;
+}
+
+.gallery-home {
+  color: red;
+  text-decoration: none;
+  font-size: 40px;
+  transition: transform 0.3s ease;
+  margin-left: auto; /* Push the link to the right side */
+}
+
+.gallery-home:hover {
+  transform: rotate(10deg);
+  cursor: pointer;
+  color: white;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img {
+  width: 80vw;
+  margin-bottom: 75px;
+  object-fit: contain;
+}
+
+/* Define keyframes for the color cycling animation */
+@keyframes rainbowText {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+
+/* Apply the animation to your text element */
+.gallery-header {
+  overflow-y: hidden;
+  text-align: center;
+  letter-spacing: 55px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-size: 100px;
+  animation: rainbowText 5s linear infinite; /* Adjust the duration as needed */
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 765px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap: 40px;
+    overflow: hidden;
+  }
+
+  .link {
+    font-weight: 800;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .title {
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    font-size: 125px;
+    font-weight: 800;
+    opacity: 0;
+  }
+
+  .about-txt {
+    padding-top: 25px;
+    font-size: 39px;
+    font-weight: 800;
+  }
+  .about-txt2 {
+    font-size: 39px;
+    font-weight: 800;
+    padding-bottom: 25px;
+  }
+
+  .contact-header {
+    color: white;
+    font-size: 65px;
+  }
+
+  .contact-container {
+    margin-top: 95px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding: 55px;
+    opacity: 0; /* Start with opacity 0 to hide the text */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition */
+  }
+
+  .contact-inputs {
+    font-size: 25px;
+  }
+
+  .footer-main {
+    background-color: black;
+    padding-top: 70px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .footer-txt {
+    font-size: 50px;
+  }
+
+  .gallery-nav {
+    display: flex;
+    align-items: center; /* Vertically align the items if needed */
+    margin-top: 55px;
+    margin-right: 50px;
+    overflow: hidden;
+  }
+
+  .gallery-home {
+    font-size: 33px;
+  }
+
+  .gallery-header {
+    margin-top: 25px;
+    font-size: 60px;
+    letter-spacing: 10px;
+  }
+}
+
+@media (min-width: 766px) and (max-width: 1023px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap: 75px;
+  }
+
+  .link {
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    font-size: 241px;
+    font-weight: 800;
+    opacity: 0;
+  }
+
+  .about-txt {
+    padding-top: 25px;
+    font-size: 65px;
+    font-weight: 800;
+  }
+  .about-txt2 {
+    font-size: 65px;
+    font-weight: 800;
+    padding-bottom: 25px;
+  }
+
+  .contact-header {
+    color: white;
+    font-size: 95px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding: 150px;
+    opacity: 0; /* Start with opacity 0 to hide the text */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition */
+  }
+
+  .contact-inputs {
+    font-size: 27px;
+  }
+
+  .footer-main {
+    background-color: black;
+    padding-top: 70px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .footer-txt {
+    font-size: 50px;
+  }
+
+  .gallery-nav {
+    display: flex;
+    align-items: center; /* Vertically align the items if needed */
+    margin-top: 55px;
+    margin-right: 50px;
+    overflow: hidden;
+  }
+
+  .gallery-home {
+    font-size: 50px;
+  }
+
+  .gallery-header {
+    margin-top: 20px;
+    font-size: 100px;
+    letter-spacing: 30px;
+  }
+
+  .gallery-img {
+    margin-bottom: 50px;
+  }
+}
