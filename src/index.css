@@ -264,7 +264,7 @@ button:hover {
   gap: 5px;
   display: flex;
   flex-direction: column;
-  width: 225px;
+/*   width: 225px; */
   color: white;
   font-size: 35px;
 }
