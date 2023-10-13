@@ -286,6 +286,8 @@ button:hover {
 }
 
 .send {
+   background-color: rgb(224, 224, 224);
+  color: black;
   margin-top: 28px;
   padding: 15px;
   font-size: 35px;
