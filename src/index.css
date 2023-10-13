@@ -290,7 +290,7 @@ button:hover {
   color: black;
   margin-top: 28px;
   padding: 15px;
-  font-size: 27px;
+  font-size: 29px;
   font-weight: 800;
   border: none;
   transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
