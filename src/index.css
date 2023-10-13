@@ -264,7 +264,7 @@ button:hover {
   gap: 5px;
   display: flex;
   flex-direction: column;
-/*   width: 225px; */
+  width: 225px;
   color: white;
   font-size: 35px;
 }
@@ -286,12 +286,11 @@ button:hover {
 }
 
 .send {
-  text-align: center;
   background-color: rgb(224, 224, 224);
   color: black;
   margin-top: 28px;
   padding: 15px;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 800;
   border: none;
   transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
